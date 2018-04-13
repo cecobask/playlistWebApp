@@ -39,6 +39,11 @@ const playlistStore = {
     const songs = playlist.songs;
     _.remove(songs, { id: songId});
   },
+  
+  getUserPlaylists(userid) {
+    return this.store.findBy(this.collection, { userid: userid });
+  },
+  
 };
 
 module.exports = playlistStore;

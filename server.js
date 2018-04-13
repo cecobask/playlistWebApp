@@ -5,8 +5,11 @@ const logger = require('./utils/logger');
 const bodyParser = require('body-parser');
 const app = express();
 const exphbs = require('express-handlebars');
+const cookieParser = require('cookie-parser');
+
 app.use(bodyParser.urlencoded({ extended: false, }));
 app.use(express.static('public'));
+app.use(cookieParser());
 app.engine('.hbs', exphbs({
   extname: '.hbs',
   defaultLayout: 'main',
