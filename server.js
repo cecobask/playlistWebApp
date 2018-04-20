@@ -6,7 +6,9 @@ const bodyParser = require('body-parser');
 const app = express();
 const exphbs = require('express-handlebars');
 const cookieParser = require('cookie-parser');
+const fileUpload = require('express-fileupload');
 
+app.use(fileUpload());
 app.use(bodyParser.urlencoded({ extended: false, }));
 app.use(express.static('public'));
 app.use(cookieParser());

@@ -25,5 +25,8 @@ router.get('/signup', accounts.signup);
 router.get('/logout', accounts.logout);
 router.post('/register', accounts.register);
 router.post('/authenticate', accounts.authenticate);
+router.post('/dashboard/uploadpicture', dashboard.uploadPicture);
+router.get('/dashboard/deleteallpictures', dashboard.deleteAllPictures);
+router.get('/dashboard/deletepicture', dashboard.deletePicture);
 
 module.exports = router;
